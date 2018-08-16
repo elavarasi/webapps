@@ -1,0 +1,95 @@
+body { width: 75%; margin: 0 auto;     
+    background-color: rgb(74, 160, 178); 
+    background-clip: content-box;
+}
+
+header, footer {
+	width: 100%;
+	padding: 10px;
+	background-color: rgb(49, 121, 240);
+    text-align: center;
+    margin: 1em;
+}
+span {
+    color: white;
+}
+
+#natureHabitat {
+     float: left;
+}
+
+main {
+    display: flex;
+
+}
+
+.leftSection {
+    width: 50%
+ 
+}
+
+.rightSection {
+    width: 50%
+
+}
+
+.rightSection img {
+    border: 10px solid white;
+    border-width: 8px;
+}
+ul {
+    width=50%; 
+    float: left;
+    list-style-type: none;
+    list-style-position: inside;
+}
+
+li {
+    color: black;
+    background-color: white;
+    width: 275px;
+    border-color: black;
+    margin: 1px;
+    height: 1.5em;
+}
+
+.listContainer{
+    display: flex;
+    align-content: space-between;
+    flex-wrap: wrap;
+    justify-content : left;
+}
+
+main {
+    border: 10px;
+}
+
+form {
+    align-items: center;
+    justify-content: center;
+}
+
+
+input[type="text"],input[type="date"], select, div[type="date"], div[type="sports"], div[type="color"]  {
+    display: block;
+    border: 1px solid black;
+    width: 60%;
+    margin: 1em;
+    
+}
+label {
+    display: block;
+    width: 60%;
+    margin: 0;
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    resize: none;
+}
