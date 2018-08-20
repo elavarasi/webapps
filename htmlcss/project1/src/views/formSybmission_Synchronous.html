@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<script>
+	// document.form1.submit();
+	function filldoc(data){
+		document.getElementById("result").innerHTML = data;
+
+	}
+
+	function handleSubmit() {
+		event.preventDefault();
+		const request = new XMLHttpRequest();
+		request.open("GET", "https://jsonplaceholder.typicode.com/todos/1", false);	//synchronou is not adviced as it runs on main thread
+		request.send();
+		const data = request.responseText;
+		filldoc(data);		
+	}
+
+</script>
+<body> <!-- 
+	<form name="form1" action="/action.php" method="post" -->
+	<form name="form1">
+		<input type="text" name="fname">
+		<input type="text" name="lname">
+		<input type="submit" onclick="handleSubmit()">
+		<div id="result"></div>
+	</form>
+
+</body>
+
+</html>	

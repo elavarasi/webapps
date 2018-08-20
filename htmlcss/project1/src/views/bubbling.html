@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script>			
+			function btn1(){
+				console.log(event.target);
+				console.log('btn1 clicked');
+			}
+		</script>
+	</head>
+	<body onclick="console.log('clicked body')" >
+		<div onclick="console.log('clicked div')" style="border:1px solid; border-color: red;">
+			<button id="btn1" onclick="btn1()">btn1</button>
+			<button id="btn2" onclick="{event.stopPropagation(); console.log('btn2 clicked')}">btn2</button>
+		</div>
+	</body>
+</html>

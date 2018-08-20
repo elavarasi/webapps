@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			#btn1, #btn2, #btn3 {
+				color: green;
+				display: block;
+				width: 50%;
+			}
+			#tooltip1, #tooltip2, #tooltip3 {
+				visibility: hidden;
+			}
+			#btn1, #btn2, #btn3: hover #tooltip1{
+				color: red;
+				display: block;
+				width: 20%;
+			}
+
+			#div1 {
+				data-placement: "left";
+			}
+
+		</style>
+	</head>
+	
+	<body>
+		<button title="Hello World!">Sample Button</button>
+		<div id="div1" title="div tooltip">this is a div</div>
+		<button id="btn1">Button 1<span id="tooltip1">tooltip1<span></button>
+		<button id="btn2">Button 2<span id="tooltip2">tooltip2</span></button>
+		<button id="btn3">Button 3<span id="tooltip3">tooltip3</span></button>
+	</body>
+</html>	

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+    <button id="btn1" class="btn1" onclick="window.alert('I am clicked')">Submit</button>
+    <ul id="demo">
+    	<li id="li1"><a href=#>"This is list item1"</a></li>
+		<li id="li2"><a href=#>"This is list item2"</a></li>
+		<li id="li3"><a href=#>"This is list item3"</a></li>
+		<li id="li4"><a href=#>"This is list item4"</a></li>
+		<li id="li5"><a href=#>"This is list item5"</a></li>
+		<li id="li6"><a href=#>"This is list item6"</a></li>
+    </ul>
+    <button id="btn2" class="btn2" onclick="addnode()">Add li</button>
+
+
+
+
+    <script>
+		console.log(document);
+		let alli = document.getElementById("demo");
+
+		let alla = document.getElementsByTagName("a");
+		for (let i=0; i<alla.length; i++) {
+			alla[i].addEventListener("click",function(e) {
+				console.log(e.target.innerText);			
+			})
+		}
+
+		// alli.addEventListener("click",function(e){
+			// 	console.log(e.target.innerText);			
+		// })
+
+
+		function addnode() {
+			const newlinode = document.createElement("li");
+			const newanode = document.createElement("a");
+			newanode.setAttribute("href","#");
+			newlinode.appendChild(newanode);
+			var textnode = document.createTextNode("This is a brand new node"); 
+			newanode.appendChild(textnode);
+			console.log(newlinode);
+			// newlinode.innerText("This is a brand new node");
+			alli.appendChild(newlinode);
+		}	
+	</script>
+</body>
+
+</html>

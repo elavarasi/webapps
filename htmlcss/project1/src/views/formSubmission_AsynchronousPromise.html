@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<body> 
+	<form name="form1">
+		<input type="text" name="fname">
+		<input type="text" name="lname">
+		<input type="submit" onclick="handleSubmit()">
+	</form>
+	<div id="result">The results are:</div>
+
+	<script>
+		function filldoc(data){
+			document.getElementById("result").innerHTML = data;
+		}
+
+		function handleSubmit() {
+			event.preventDefault();		
+			let getdataPromise = new Promise(function(resolve, reject) {
+				const request = new XMLHttpRequest();	
+				request.open("GET", "https://jsonplaceholder.typicode.com/todos/1",true);
+				request.send();
+				request.onreadystatechange = function(){
+					console.log(this.status);
+					if(this.status == 200){
+						const data = request.responseText;
+						console.log(data)
+						return resolve(data);
+					} else {
+						reject("error rejected");
+					}
+				}			
+			});
+			
+			getdataPromise
+				.then((data) => {
+					console.log("inside then ");
+					filldoc(data);
+				})
+				.catch((err) => {
+					console.log(`got and error ${err}`);
+				});
+		}
+	</script>
+</body>
+
+</html>	
