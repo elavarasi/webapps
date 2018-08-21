@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>anni</title>
+	<title>Async</title>
 </head>
 <body> 
 	<form name="form1" onsubmit="handleSubmit()">
@@ -18,7 +18,6 @@
 		}
 
 		function handleSubmit() {
-			console.log(1212);
 			event.preventDefault();		
 			let getdataPromise = new Promise(function(resolve, reject) {
 				const request = new XMLHttpRequest();	
